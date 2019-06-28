@@ -89,6 +89,7 @@ body{
     position: relative;
     /* overflow: hidden; */
     /* display: inline-block; */
+    transition: .6s ease;
 }
 
 @keyframes fadeIn{
@@ -105,6 +106,10 @@ body{
 {
    display: block;
    animation-name: fadeIn;
+}
+
+.dropdown:link .dropdown-content{
+    background: gray;
 }
 
 .dropdown-content{
@@ -156,7 +161,7 @@ body{
     width: 30%;
     box-shadow: 0 3px 5px #0000002a;
     background: white;
-    height: 400px;
+    height: auto;
 }
 
 
@@ -255,5 +260,35 @@ footer{
     background: #363636;
     min-height: 60px;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
+footer p{
+    color: white;
+}
+
+
+
+.card{
+    width: 200px;
+    margin: 0 auto;
+    box-shadow: 0 3px 5px #0000002a;
+    padding: 10px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card p{
+    font-size: 12px;
+}
