@@ -1,0 +1,29 @@
+.tag-container{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tag-title{
+    color: #929292;
+    font-size: 17px;
+}
+
+.tag{
+    width: 82px;
+    height: 27px;
+    text-decoration: none;
+    color: white;
+    background: #363636;
+    border-radius: 17px;
+    font-family: 'Monserrat';
+    text-transform: uppercase;
+}
