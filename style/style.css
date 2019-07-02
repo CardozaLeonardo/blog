@@ -10,6 +10,13 @@
     url(../font/lato-regular-webfont.woff2) format("woff2");
   }
 
+
+  @font-face{
+    font-family: "Montserrat-Bold";
+    src: url(../font/montserrat-bold-webfont.woff) format("woff"),
+    url(../font/montserrat-bold-webfont.woff2) format("woff2");
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -214,7 +221,7 @@ p{
 }
 
 h1,h2,h3,h4{
-    font-family: 'Montserrat';
+    font-family: Montserrat-Bold;
 }
 
 h1{
