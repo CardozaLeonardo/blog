@@ -1,6 +1,14 @@
 @font-face{
-
+  font-family: "Lato-Bold";
+  src: url(../font/lato-bold-webfont.woff) format("woff"),
+  url(../font/lato-bold-webfont.woff2) format("woff2");
 }
+
+@font-face{
+    font-family: "Lato";
+    src: url(../font/lato-regular-webfont.woff) format("woff"),
+    url(../font/lato-regular-webfont.woff2) format("woff2");
+  }
 
 body{
     margin: 0;
@@ -151,14 +159,14 @@ body{
 }
 
 .main-content{
-    width: 65%;
+    width: 70%;
     box-shadow: 0 3px 5px #0000002a;
     background: white;
     padding: 20px;
 }
 
 .lateral-content{
-    width: 30%;
+    width: 25%;
     /* box-shadow: 0 3px 5px #0000002a; */
     background: inherit;
     height: auto;
@@ -177,7 +185,7 @@ img{
 
 p{
     color: #363636;
-    font-family: 'Open Sans';
+    font-family: Lato;
     line-height: 1.8;
     font-size: 16px;
 }
@@ -310,27 +318,44 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    background: white;
+    height: 100px;
+    width: 100%;
+}
+
+.controllers-cont{
+    background: #d2d2d2;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .txt-buscar{
     background: #D2D2D2;
     height: 27px;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    padding-left: 8px;
     border: none;
     width: 200px;
     color: white;
-    
+    border-radius: 10px;
+    color: #363636;
+    outline: none;
 }
 
 .search-button{
     background: #D2D2D2;
-    height: 27px;
+    height:32px;
     border: none;
+    border-radius: 10px;
     width: 40px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
 }
 
 .search-icon{
