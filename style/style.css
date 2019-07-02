@@ -17,6 +17,12 @@
     url(../font/montserrat-bold-webfont.woff2) format("woff2");
   }
 
+  @font-face{
+    font-family: "Montserrat";
+    src: url(../font/montserrat-regular-webfont.woff) format("woff"),
+    url(../font/montserrat-regular-webfont.woff2) format("woff2");
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -65,7 +71,7 @@ body{
     /* color: #302F2F; */
     color: white;
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     height: inherit;
     font-size: 12px;
     line-height: 60px;
@@ -268,11 +274,11 @@ hr{
     text-decoration: none;
     color: #363636;
     font-weight: bold;
-    font-family: 'Montserrat';
+    font-family: Montserrat-Bold;
 }
 
 .post-date{
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-size: 12px;
 }
 
