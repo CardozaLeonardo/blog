@@ -30,4 +30,68 @@
     text-align: center;
     line-height: 27px;
     margin-right: 14px;
+    transition: .3s ease;
+}
+
+.tag:hover{
+    background: #eea826;
+    color: #363636;
+}
+
+.header-image{
+    width: 100%;
+}
+
+.header-image img{
+    width: 100%;
+    height: auto;
+}
+
+.main-content.about{
+   background: #F3F3F3;
+   padding-left: 0;
+   box-shadow: none;
+}
+
+.personal-card{
+    background: white;
+    height: 405px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+.personal-photo{
+    /* height: 405px;
+    width: 365px; */
+}
+
+.personal-photo img{
+    height: 405px;
+    width: 365px;
+}
+
+.personal-info{
+    padding: 0 20px;
+    width: auto;
+    height: 365px;
+}
+
+.social-access{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-access a{
+    border-radius: 50%;
+}
+
+.social-access a img{
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
 }

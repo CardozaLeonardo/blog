@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Guide</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/objects.css">
+
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="shortcut icon" href="../img/icon/brand.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="container-sfull" style="height: inherit;">
+
+            <!-- <a href="index.html" class="brand">Brand</a> -->
+            <a href="index.html" class="brand"><img class="brand-image" src="../img/icon/brand.svg" alt="brand"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#" class="nav-link">Tutoriales</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <button class="dropdown-button">Tutoriales </button>
+                    <div class="dropdown-icon"></div>
+                    <div class="dropdown-content">
+                        <a href="#" class="">HTML</a>
+                        <a href="#" class="">CSS</a>
+                        <a href="#" class="">JavaScript</a>
+                        <a href="#" class="">JQuery</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">Acerca</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        
+        <div class="main-content">
+
+            <h1>CSS tuani</h1>
+            <hr>
+    
+            <div class="author-box">
+                <figure class="author-profile">
+                    <img src="../img/Jose_Palacios.jpg" alt="autor">
+                </figure>
+
+                <div class="author-info">
+                    <a href="#" class="author-name">José Palacios Navarro</a>
+                    <p class="post-date">Miércoles 19 de junio de 2019</p>
+                </div>
+            </div>
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/newtons-cradle-loader.gif" alt="image">
+            </figure>
+            
+            <h2> Introducción</h2>
+            
+            <p>
+                CSS, las siglas para <i>Cascading Style Sheets</i>, u Hojas de estilo en cascada, es una tecnología que nos permite crear una página web de manera más exacta; o, siendo más especfícicos, que nos permite editar una página web.
+            </p>
+        
+            <p>
+                Si bien se puede decir que HTML (se recomienda leer antes esa entrada del blog) es la estructura de una página web, CSS es la forma de darle ese atractivo visual a la  página, permitiéndonos ordenar los textos, darles color, poner un fondo, crear banners, etc., en fin, todo para una edición de página web.
+            </p>
+        
+            <p>
+                Ahora, ¿cómo se trabaja con CSS? Simple. Si bien es recomendable utilizar un editor de texto más "profesional", crear hojas de estilo con CSS (cabe recalcar que CSS es una forma de trabajar hojas de estilo, pero existen más) con el simple bloc de notas que traen todas las computadoras.
+            </p>
+        
+            <p>
+                La base, y lo primordial, es crear un archivo con extensión ".css". Luego de esto, ya podemos comenzar a editar nuestra hoja de estilo.
+            </p>
+            
+            <p>
+                Pero, antes de avanzar más, quiero dejar claro que esa es la forma que utilizaremos para explicar el uso de CSS, hay otras dos formas, menos usadas por lo complicado y desordenado que se puede volver trabajar así.
+            </p>
+            
+            <p>
+                La primera es añadir el atributo "style" al inicio de una etiqueta, y posteriormente definir el estilo que esa etiqueta tendrá, por ejemplo: 
+            </p>
+            
+             <figure class="post-img">
+                <img src="../img/articles/css-forma1.png" alt="CSSforma1">
+            </figure>
+            
+            <p>
+                En ese ejemplo, se está diciendo que el párrafo tendrá un estilo con letras rojas. Esta forma de trabajar con CSS es la menos recomendada, debido a que  se tiene que estar dando estilo a cada etiqueta, y se puede volver confuso y muy largo, así que sólo se utiliza en páginas web muy pequeñas y simples..
+            </p>
+            
+            <p>
+                La siguiente forma, igual poco recomendado, pero más usada que la anterior, es crear la hoja de estilo pero dentro la cabecera, o etiqueta "head" del archivo html, por ejemplo:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/css-forma2.png" alt="CSSforma2">
+            </figure>
+            
+            <p>
+                Primero, se tiene que notar que la forma de trabajo es distinta, en vez de editar etiqueta por etiqueta, estoy englobando a todas las etiquetas "p" del archivo html, luego, se abren llaves "{}", y luego se ponen las ediciones de estilo que se desean en esas etiquetas y se finalizan con un ";", como en ese ejemplo que configura el color de la letra en rojo y el color del fondo en azul.
+            </p>
+            
+            <p>
+                Esta forma de trabajo es recomendable sólo para páginas web sencillas, debido a que se haría un documento html extremandamente largo.
+            </p>
+            
+            <p>
+                Ahora, continuando, la tercera forma, y la que utilizaremos para entrar más en detalle es crear un archivo .css, y referenciarlo dentro de el archivo html, así:
+            </p>
+                        
+            <figure class="post-img">
+                <img src="../img/articles/css-forma3.png" alt="CSSforma3">
+            </figure>
+            
+            <p>
+                Dentro de la etiqueta "link" se escribe, primer el tipo de relación entre documentos, en este caso, hoja de estilo o <i>stylesheet</i>, en inglés, y como se debe de escribir en el documento, y luego, la referencia que se utilizará, o sea, el archivo .css, en este caso, como está situado en el mismo espacio donde está el documento html, no es necesario especificar la ruta, simplemente se escribe el nombre del archivo. 
+            </p>
+            
+            <p>
+                Habiendo hecho esta referencia, ya se puede trababajar dentro de la hoja css, y todos los cambios que se hagan ahí, se harán en el documento html; y, ¿cómo se trabajan en las hojas de estilo? De la  misma forma que en la 2da forma:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/css-basico.png" alt="cssbasico">
+            </figure>
+            
+            <p>
+                La primordial diferencia es que esto se trabaja en un documento aparte, totalmente dedicado a editar el estilo.
+            </p>
+            
+            <p>
+                Sabiendo esta forma, la que utilizaremos, ya podemos comenzar a entrar totalmente dentro del mundo de css.
+            </p> 
+
+        </div>
+
+        <div class="lateral-content">
+          <!-- <h4>Te puede interesar</h4>
+          <div class="post-recom">
+              <img src="img/yjdoiycuw04lvrebijtw.jpg" alt="post">
+
+          </div> -->
+
+          <div class="search-group">
+                <div class="controllers-cont">
+
+                    <input placeholder="BUSCAR" type="text" class="txt-buscar">
+                        <button type="submit" class="search-button"><i class="search-icon"></i></button>
+                </div>
+          </div>
+
+          <div class="tag-container">
+              
+            <h5 class="tag-title">Etiquetas</h5>
+            <div class="tags">
+                <a href="#" class="tag">CSS</a>
+                <a href="#" class="tag">HTML</a>
+                <a href="#" class="tag">JQUERY</a>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Todos los derechos reservados - 2019</p>
+        <div class="social">
+            <a href="#" class="social-link"><img src="../img/icon/facebook-logo-button.svg" alt="facebook"></a>
+            <a href="#" class="social-link"><img src="../img/icon/twitter.svg" alt="twitter"></a>
+            <a href="#" class="social-link"><img src="../img/icon/github-logo.svg" alt="github"></a>
+            <a href="#" class="social-link"><img src="../img/icon/youtube.svg" alt="youtube"></a>
+        </div>
+    </footer>
+</body>
+</html>

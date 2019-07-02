@@ -40,12 +40,12 @@ body{
 }
 
 .post-card-tag{
-    background: #eea8269d;
+    background: #eea826b7;
     height: 22px;
     width: 70px;
     border-radius: 18px;
     color: white;
-    font-family: 'Monserrat';
+    font-family: Montserrat;
     font-size: 12px;
     display: flex;
     align-items: center;
