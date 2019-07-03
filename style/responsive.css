@@ -7,6 +7,15 @@
     .lateral-content{
         margin-top: 30px;
     }
+
+    .personal-card{
+        display: block;
+        height: auto;
+    }
+
+    .personal-info{
+        width: 60%;
+    }
 }
 
 
@@ -22,6 +31,44 @@
 {
     .navbar-nav{
         width: 50%;
+    }
+
+    .personal-info{
+        width: 80%;
+    }
+
+    .personal-photo{
+        width: 100%;
+        margin: 0;
+    }
+
+    .personal-photo img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 560px)
+{
+    .navbar-nav{
+        width: 50%;
+    }
+
+    .personal-card p{
+        font-size: 15px;
+    }
+
+    .personal-info{
+        width: 80%;
+    }
+
+    .social-access{
+        margin-top: 5px;
+    }
+
+    .social-access a img{
+        width: 36px;
+        height: 36px;
     }
 }
 

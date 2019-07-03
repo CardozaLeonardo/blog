@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Guide</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/objects.css">
+
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="shortcut icon" href="../img/icon/brand.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="container-sfull" style="height: inherit;">
+
+            <!-- <a href="index.html" class="brand">Brand</a> -->
+            <a href="../index.html" class="brand"><img class="brand-image" src="../img/icon/brand.svg" alt="brand"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#" class="nav-link">Tutoriales</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <button class="dropdown-button">Tutoriales </button>
+                    <div class="dropdown-icon"></div>
+                    <div class="dropdown-content">
+                        <a href="#" class="">HTML</a>
+                        <a href="#" class="">CSS</a>
+                        <a href="#" class="">JavaScript</a>
+                        <a href="#" class="">JQuery</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact.html" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">Acerca</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        
+        <div class="main-content">
+
+            <h1>Inicio rápido CSS</h1>
+            <hr>
+    
+            <div class="author-box">
+                <figure class="author-profile">
+                    <img src="../img/Jose_Palacios.jpg" alt="autor">
+                </figure>
+
+                <div class="author-info">
+                    <a href="../about.html#palacios" class="author-name">José Palacios Navarro</a>
+                    <p class="post-date">Miércoles 19 de junio de 2019</p>
+                </div>
+            </div>
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/inicio-rapido-css/4_newish_css_props-1502899924586.png" alt="image">
+            </figure>
+            <hr>
+            
+            <h3> Edición con CSS</h3>
+            
+            <p>
+                Primero, se tiene que saber que el estilo es aplicable a todas las etiquetas, ya sean "body", "p", "pre", "div", "header", "footer", y, a la totalidad del archivo, usando el asterisco "*".
+            </p>
+            
+            <p>
+                Pero, también se puede ser más específico todavía, utilizando la lógica de la primera forma, o sea, dándole edición a un etiqueta en específico, pero, dentro de la hoja de estilo, no dentro del documento html.
+            </p>
+            
+            <p>
+                Esto se hace de la siguiente manera.
+            </p>
+            
+            <p>
+                Primero, se especifica la clase en el documento html:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/html-clase.png" alt="htmlClases">
+            </figure>
+            
+            <p>
+                Luego, dentro de la hoja de estilo, se escribe un punto "." seguido por el nombre de la clase y se trabaja normalmente, así:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/css-clase.png" alt="cssClases">
+            </figure>
+            
+            <p>
+                También es importante saber que las etiquetas se pueden enlazar para aplicarle los mismos estilos, como por ejemplo, a todos los tipos de títulos:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/css-enlace-etiquetas.png" alt="cssEtiquetas">
+            </figure>
+            
+            <p>
+                Como podemos ver, el fondo de color rojo se  pondrá en los títulos especificados.
+            </p>
+            
+            <p>
+                Ahora, pensará, ¿sólo se puede cambiar el color de la letra y el fondo? Por supuesto que no. CSS te permite hacer una edición muy buena y completa, veamos el siguiente ejemplo.
+            </p>
+            
+            <p>
+                Quiero que el cuerpo de mi documento tenga una imagen de fondo, además, quiero que su comportamiento (de la página) sea como la de una caja, para funciones de cambio de tamaño de la  página. También, quiero que el primer párrafo que escriba lleve un borde casi circular, y que el contenido esté un poco alejado del borde, y además, centrado, ¿cómo haremos esto? Así:
+            </p>
+            
+            <figure class="post-img">
+                <img src="../img/articles/css-primer-ejemplo.png" alt="cssEjemplo1">
+            </figure>
+            
+            <p>
+                Sé que el salto fue  muy grande, pero es para que se aprecien la cantidad de posibilidades que existe.
+            </p>
+            
+            <p>
+                Así que, como podemos  observar, se cumplieron todos los requisitos, pero, lo importante es, ¿cómo? A continuación, explico cada función.
+            </p>
+            
+            <p>
+                Primero, nótese que aplico la función "box-sizing" a todo el documento, con la condición de "border-box", la primera propiedad es para que algo, en este caso la totalidad de la página, se ajuste a un comportamiento específico, el comportamiento específico, en este caso, es border-box, esto implica que se tenga en cuenta cualquier borde y relleno en un espacio específico, o sea; en este caso, como es para la totalidad de la página, esto sirve para que se utilice hasta el último borde de la página, esto ayuda a dimensionar mucho más fácil ciertos elementos.
+            </p>
+            
+            <p>
+                Luego, a la etiqueta body, le especifico que tendrá un fondo de pantalla, con la propiedad "background-image" (el "image" es reemplazable por "color" para especificar un color de fondo.), postesteriormente se especifica como se ubicará la imagen, yo elijo por ruta (url), y como la imagen se encuentra en la misma carpeta, sólo especifico el nombre.
+            </p>
+            
+            <p>
+                Luego, al párrafo1, anteriormente etiquetado, le especifico que tendrá un borde con estilo sólido, que este borde poseerá un radio de 20 pixeles (haciendo el efecto circular), con un padding (esta es la separación entre el contenido y el borde) de 20 pixeles, y le especifico que el texto estará alineado al centro.
+            </p>
+            
+            <p>
+                El resultado final fue el anteriormente mostrado. Así se concluye esta primera entrada mostrando un par de propiedades de CSS.
+            </p>
+
+        </div>
+
+        <div class="lateral-content">
+          <!-- <h4>Te puede interesar</h4>
+          <div class="post-recom">
+              <img src="img/yjdoiycuw04lvrebijtw.jpg" alt="post">
+
+          </div> -->
+
+          <div class="search-group">
+                <div class="controllers-cont">
+
+                    <input placeholder="BUSCAR" type="text" class="txt-buscar">
+                        <button type="submit" class="search-button"><i class="search-icon"></i></button>
+                </div>
+          </div>
+
+          <div class="tag-container">
+              
+            <h5 class="tag-title">Etiquetas</h5>
+            <div class="tags">
+                <a href="#" class="tag">CSS</a>
+                <a href="#" class="tag">HTML</a>
+                <a href="#" class="tag">JQUERY</a>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Universidad Centroamericana - 2019</p>
+        <div class="social">
+            <a href="#" class="social-link"><img src="../img/icon/facebook-logo-button.svg" alt="facebook"></a>
+            <a href="#" class="social-link"><img src="../img/icon/twitter.svg" alt="twitter"></a>
+            <a href="#" class="social-link"><img src="../img/icon/github-logo.svg" alt="github"></a>
+            <a href="#" class="social-link"><img src="../img/icon/youtube.svg" alt="youtube"></a>
+        </div>
+    </footer>
+</body>
+</html>
