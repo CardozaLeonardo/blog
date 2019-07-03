@@ -96,3 +96,62 @@
     width: 46px;
     border-radius: 50%;
 }
+
+
+/* ---------- CONTACT ------------- */
+
+
+.contact-box{
+    width: 100%;
+}
+
+.contact-form{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contact-input{
+    border: none;
+    border-radius: 6px;
+    background: #D2D2D2;
+    height: 38px;
+    width: 236px;
+    font-display: Lato;
+    color: #363636;
+    font-size: 16px;
+    outline: none;
+    padding-left: 4px;
+}
+
+textarea{
+    background: #D2D2D2;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-display: Lato;
+    color: #363636;
+    font-size: 16px;
+}
+
+.submit-button{
+    background: #EEA826;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 173px;
+    color: white;
+    font-family: Montserrat;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 40px;
+    transition: .3s ease-in;
+}
+
+.submit-button:hover{
+    background: #363636;
+}
+
+.submit-button:active{
+    transform: scale(.95);
+}

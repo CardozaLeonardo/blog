@@ -37,7 +37,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contacto</a>
+                    <a href="../contact.html" class="nav-link">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a href="../about.html" class="nav-link">Acerca</a>
@@ -100,8 +100,95 @@
                 a nuestro archivo. Para ello, podemos utilizar links ofrecido tanto por el sitio oficial y 
                 Google CDN, o bien descargarnos el archivo de la librería.
             </p>
-        
-            
+
+            <p>
+                Yo usaré la siguiente etiqueta para adquirirlo: 
+            </p>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/link-jquery.PNG" alt="link-jquery">
+            </figure>
+
+            <h3>Nuevo script y configuración</h3>
+
+            <p>
+                Ahora crearemos un nuevo archivo JavaScript, igualmente aquí el nombre no importa, 
+                sólo debemos ser cuidadosos al agregar el script a nuestro HTML. La idea es colocar 
+                la etiqueta “script” que agrega nuestro archivo JavaScript dentro de “body”, de forma 
+                que cuando se procese el código, se lea primero la librería JQuery y así utilizar sus 
+                funciones en nuestro script.
+            </p>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/adding-script.PNG" alt="">
+            </figure>
+
+            <p>¡Empecemos a codear!</p>
+            <p>Empecemos con unas variables que nos permitirán establecer la conexión con el 
+             servidor de SWAPI:
+            </p>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/first_variables.PNG" alt="">
+            </figure>
+
+            <p>
+                Ahora explico. Comencemos con “API_URL”, está variable contiene la dirección 
+                con la que nos conectamos al servidor. “PEOPLE_URL” es el segmento de la dirección 
+                que nos consultará los personajes. Si observamos el sitio de SWAPI, nos daremos cuenta 
+                que podemos escoger los segmentos “/people/id”, “planet/id/” y “starship/id”, todas las 
+                opciones son seguidas por un id que corresponde a un registro en específico.
+            </p>
+
+            <p>
+                En la asignación de la variable “lukeUrl” hacemos un remplazo del segmento del ID, con un 
+                valor numérico (1) que corresponde al personaje Luke Skywalker. Recordemos que con el 
+                segmento “/people/” nos referimos a los personajes.
+            </p>
+
+            <h3>Creando las funciones para la petición</h3>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/funciones.PNG" alt="">
+            </figure>
+
+            <p>
+                Creamos nuestra función “onPeopleResponse” que lo declaramos como una variable. Esta 
+                función será nuestro callback. Ahora te estará preguntando qué demonios es un callback, 
+                pues los callbacks son funciones que se ejecutarán cuando nuestras operaciones asíncronas, 
+                pues son procesos no dependientes al principal. Para explicar el tema del asincronismo se 
+                requerirá de un futuro post, sigamos con el tutorial.
+            </p>
+
+            <p>
+                Con “obtenerPersonajes” obtendremos un valor en formato JSON recuperado desde el servidor de SWAPI, 
+                uno de los parámetros que contiene es “name”, el cual será mostrado con nuestro callback. Esta función 
+                tiene un ID como parámetro, el cual especifica el personaje que queremos obtener.
+            </p>
+
+            <p>Y sólo nos quedaría llamar a la función, pasándole el un ID:</p>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/calling.png" alt="">
+            </figure>
+
+            <h3>Ejecutamos la petición</h3>
+
+            <p>
+                Ahora vamos a revisar el resultado de la petición. Para ello abriremos nuestro 
+                archivo HTML en nuestro navegador. Es muy probable que seas de la gran mayoría de 
+                personas que utiliza Google Chrome como su navegador de preferencia, así que una carguemos 
+                el archivo en el navegador (que no mostrará nada) le daremos click derecho y seleccionamos inspeccionar.
+            </p>
+
+            <p>
+                Si nos seleccionamos la consola en el Developement Tools, nos debería 
+                aparecer el resultado de la petición.
+            </p>
+
+            <figure class="post-img">
+                <img src="../img/articles/api-starwars-ajax/console.PNG" alt="">
+            </figure>
 
         </div>
 
