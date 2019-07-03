@@ -51,102 +51,78 @@
         
         <div class="main-content">
 
-            <h1>Inicio rápido CSS</h1>
+            <h1>HTML</h1>
             <hr>
     
             <div class="author-box">
                 <figure class="author-profile">
-                    <img src="../img/Jose_Palacios.jpg" alt="autor">
+                    <img src="../img/nelson-profile.jpg" alt="autor">
                 </figure>
 
                 <div class="author-info">
-                    <a href="../about.html#palacios" class="author-name">José Palacios Navarro</a>
+                    <a href="../about.html#palacios" class="author-name">Nelson Cerros Úbeda</a>
                     <p class="post-date">Miércoles 19 de junio de 2019</p>
                 </div>
             </div>
             <figure class="post-img">
                 <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
-                <img src="../img/articles/inicio-rapido-css/4_newish_css_props-1502899924586.png" alt="image">
+                <img src="../img/Nelson.JPG" alt="image">
             </figure>
             <hr>
             
-            <h3> Edición con CSS</h3>
-            
             <p>
-                Primero, se tiene que saber que el estilo es aplicable a todas las etiquetas, ya sean "body", "p", "pre", "div", "header", "footer", y, a la totalidad del archivo, usando el asterisco "*".
+                HTML, que significa <strong> Lenguaje de Marcado para Hipertextos (HyperText Markup Language)</strong> es el
+                elemento de construcción más básico de una página web y se usa para crear y representar visualmente
+                una página web. Determina el contenido de la página web, pero no su funcionalidad. Otras tecnologías
+                distintas de HTML son usadas generalmente para describir la apariencia/presentación de una página 
+                web (CSS) o su funcionalidad (JavaScript).
+            </p>
+    
+            <p>
+                Las etiquetas son la representación básica de la información en un 
+                documento html. Sirven para crear y organizar el contenido.
+            </p>
+    
+        
+            <p>
+                Algunas de las etiquetas más conocidas y usadas son:
+                <ul>
+                    <li>
+                        Etiquetas de cabecera (head)
+                        <ul>
+                            
+                            <li>
+                                doctype: indica al navegador el tipo de documento que se está mostrando.
+                            </li>
+                            <li>
+                                html: es la etiqueta que envuelve todo el documento
+                            </li>
+                            <li>
+                                head: es la cabecera del documento y contiene sub etiquetas que describen 
+                                al documento o incluyen recursos adicionales.
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                            Etiquetas del cuerpo del documento (body):
+                        <ul>
+                            <li>article: diferencia partes del contenido que pueden vivir por sí mismas.</li>
+                            <li>nav: para hacer menús de navegación.</li>
+                            <li> aside: contenido menos relevante, como publicidad, etc.</li>
+                            <li>section: sirve para diferenciar las secciones principales del contenido.</li>
+                            <li>header: cabecera del documento.</li>
+                            <li>footer: pie de página del documento.</li>
+                            <li>h1 - h6: títulos de nuestro sitio web.</li>
+                            <li>table: tablas de contenidos, similar a la estructura de las hojas de calculo./li>
+                            <li> ul y ol: listas de items.</li>
+                            <li>div: cualquier división para organizar el contenido.</li>
+                        </ul>
+                    </li>
+                </ul>
+                  
             </p>
             
-            <p>
-                Pero, también se puede ser más específico todavía, utilizando la lógica de la primera forma, o sea, dándole edición a un etiqueta en específico, pero, dentro de la hoja de estilo, no dentro del documento html.
-            </p>
-            
-            <p>
-                Esto se hace de la siguiente manera.
-            </p>
-            
-            <p>
-                Primero, se especifica la clase en el documento html:
-            </p>
-            
-            <figure class="post-img">
-                <img src="../img/articles/html-clase.png" alt="htmlClases">
-            </figure>
-            
-            <p>
-                Luego, dentro de la hoja de estilo, se escribe un punto "." seguido por el nombre de la clase y se trabaja normalmente, así:
-            </p>
-            
-            <figure class="post-img">
-                <img src="../img/articles/css-clase.png" alt="cssClases">
-            </figure>
-            
-            <p>
-                También es importante saber que las etiquetas se pueden enlazar para aplicarle los mismos estilos, como por ejemplo, a todos los tipos de títulos:
-            </p>
-            
-            <figure class="post-img">
-                <img src="../img/articles/css-enlace-etiquetas.png" alt="cssEtiquetas">
-            </figure>
-            
-            <p>
-                Como podemos ver, el fondo de color rojo se  pondrá en los títulos especificados.
-            </p>
-            
-            <p>
-                Ahora, pensará, ¿sólo se puede cambiar el color de la letra y el fondo? Por supuesto que no. CSS te permite hacer una edición muy buena y completa, veamos el siguiente ejemplo.
-            </p>
-            
-            <p>
-                Quiero que el cuerpo de mi documento tenga una imagen de fondo, además, quiero que su comportamiento (de la página) sea como la de una caja, para funciones de cambio de tamaño de la  página. También, quiero que el primer párrafo que escriba lleve un borde casi circular, y que el contenido esté un poco alejado del borde, y además, centrado, ¿cómo haremos esto? Así:
-            </p>
-            
-            <figure class="post-img">
-                <img src="../img/articles/css-primer-ejemplo.png" alt="cssEjemplo1">
-            </figure>
-            
-            <p>
-                Sé que el salto fue  muy grande, pero es para que se aprecien la cantidad de posibilidades que existe.
-            </p>
-            
-            <p>
-                Así que, como podemos  observar, se cumplieron todos los requisitos, pero, lo importante es, ¿cómo? A continuación, explico cada función.
-            </p>
-            
-            <p>
-                Primero, nótese que aplico la función "box-sizing" a todo el documento, con la condición de "border-box", la primera propiedad es para que algo, en este caso la totalidad de la página, se ajuste a un comportamiento específico, el comportamiento específico, en este caso, es border-box, esto implica que se tenga en cuenta cualquier borde y relleno en un espacio específico, o sea; en este caso, como es para la totalidad de la página, esto sirve para que se utilice hasta el último borde de la página, esto ayuda a dimensionar mucho más fácil ciertos elementos.
-            </p>
-            
-            <p>
-                Luego, a la etiqueta body, le especifico que tendrá un fondo de pantalla, con la propiedad "background-image" (el "image" es reemplazable por "color" para especificar un color de fondo.), postesteriormente se especifica como se ubicará la imagen, yo elijo por ruta (url), y como la imagen se encuentra en la misma carpeta, sólo especifico el nombre.
-            </p>
-            
-            <p>
-                Luego, al párrafo1, anteriormente etiquetado, le especifico que tendrá un borde con estilo sólido, que este borde poseerá un radio de 20 pixeles (haciendo el efecto circular), con un padding (esta es la separación entre el contenido y el borde) de 20 pixeles, y le especifico que el texto estará alineado al centro.
-            </p>
-            
-            <p>
-                El resultado final fue el anteriormente mostrado. Así se concluye esta primera entrada mostrando un par de propiedades de CSS.
-            </p>
 
         </div>
 
@@ -165,7 +141,9 @@
                 </div>
           </div>
 
-          <div class="lateral-cards">
+          
+
+        <div class="lateral-cards">
             <h5>Te puede interesar</h5>
 
             <a href="css-tuani.html">

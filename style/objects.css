@@ -1,7 +1,8 @@
 .tag-container{
-    width: 100%;
+    width: (100% - 6px);
     background: white;
     padding: 18px 0;
+    padding-left: 6px;
     margin-top: 15px;
     min-height: 201px;
     overflow: hidden;
@@ -163,6 +164,7 @@ textarea{
 .lateral-cards{
     width: 100%;
     background: white;
+    padding-top: 6px;
 }
 
 .lateral-cards a{
@@ -174,13 +176,19 @@ textarea{
     font-size: 17px;
     font-family: 'Montserrat';
     margin-top: 15px;
+    margin-left: 6px;
 }
 
 .lateral-card{
     width: 95%;
     margin: 10px auto;
     padding-bottom: 15px;
+    /* padding-left: 5px; */
     box-shadow: 0 3px 5px #0000002a;
+}
+
+.lateral-card h6, .lateral-card p{
+    margin-left: 5px;
 }
 
 .lateral-card:hover{
