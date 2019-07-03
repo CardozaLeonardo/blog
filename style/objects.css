@@ -1,9 +1,10 @@
 .tag-container{
     width: 100%;
     background: white;
-    padding: 18px 20px;
+    padding: 18px 0;
     margin-top: 15px;
     min-height: 201px;
+    overflow: hidden;
 }
 
 .tags{
@@ -85,6 +86,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
+    padding-right: 20px;
 }
 
 .social-access a{
@@ -155,3 +157,59 @@ textarea{
 .submit-button:active{
     transform: scale(.95);
 }
+
+/* ---------- Lateral Cards ----- */
+
+.lateral-cards{
+    width: 100%;
+    background: white;
+}
+
+.lateral-cards a{
+    text-decoration: none;
+}
+
+.lateral-cards h5{
+    color: #929292;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    margin-top: 15px;
+}
+
+.lateral-card{
+    width: 95%;
+    margin: 10px auto;
+    padding-bottom: 15px;
+    box-shadow: 0 3px 5px #0000002a;
+}
+
+.lateral-card:hover{
+    box-shadow: 2px 3px 5px #4543c996;
+}
+
+.lateral-card:active{
+    transform: scale(.95);
+}
+
+.lat-card-img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.lat-card-img img{
+    width: 100%;
+    height: auto;
+}
+
+.lat-card-title{
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    color: #363636;
+}
+
+.lat-card-text{
+    font-family: Lato;
+    font-size: 12px;
+}
+

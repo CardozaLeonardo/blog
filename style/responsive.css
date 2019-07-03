@@ -1,3 +1,15 @@
+@media screen and (max-width: 1230px)
+{
+    .container{
+        display: block;
+    }
+
+    .lateral-content{
+        margin-top: 30px;
+    }
+}
+
+
 @media screen and (max-width: 1100px)
 {
     .navbar-nav{
