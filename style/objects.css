@@ -223,3 +223,26 @@ textarea{
     font-size: 12px;
 }
 
+
+.down-box{
+    width: 200px;
+    background: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.down-box a{
+    font-display: Lato;
+    font-size: 18px;
+    color: #363636;
+}
+
+.down-box a:hover{
+   color: #EEA826;
+}
+
+
+
+

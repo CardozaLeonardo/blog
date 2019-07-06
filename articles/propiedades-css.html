@@ -51,7 +51,7 @@
         
         <div class="main-content">
 
-            <h1>Introducción</h1>
+            <h1>Propiedades CSS</h1>
             <hr>
     
             <div class="author-box">
@@ -66,87 +66,53 @@
             </div>
             <figure class="post-img">
                 <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
-                <img src="../img/articles/newtons-cradle-loader.gif" alt="image">
+                <img src="../img/articles/propiedades-css/1_OFsc0SD55jhi8cjo7aCA4w.jpeg" alt="image">
             </figure>
             <hr>
             
-            
-            
-            <p>
-                CSS, las siglas para <i>Cascading Style Sheets</i>, u Hojas de estilo en cascada, es una tecnología que nos permite crear una página web de manera más exacta; o, siendo más especfícicos, que nos permite editar una página web.
-            </p>
-        
-            <p>
-                Si bien se puede decir que HTML (se recomienda leer antes esa entrada del blog) es la estructura de una página web, CSS es la forma de darle ese atractivo visual a la  página, permitiéndonos ordenar los textos, darles color, poner un fondo, crear banners, etc., en fin, todo para una edición de página web.
-            </p>
-        
-            <p>
-                Ahora, ¿cómo se trabaja con CSS? Simple. Si bien es recomendable utilizar un editor de texto más "profesional", crear hojas de estilo con CSS (cabe recalcar que CSS es una forma de trabajar hojas de estilo, pero existen más) con el simple bloc de notas que traen todas las computadoras.
-            </p>
-        
-            <p>
-                La base, y lo primordial, es crear un archivo con extensión ".css". Luego de esto, ya podemos comenzar a editar nuestra hoja de estilo.
-            </p>
+            <h2> Propiedades básicas</h2>
             
             <p>
-                Pero, antes de avanzar más, quiero dejar claro que esa es la forma que utilizaremos para explicar el uso de CSS, hay otras dos formas, menos usadas por lo complicado y desordenado que se puede volver trabajar así.
+                En las dos entradas anteriores del blog se habló de qué es CSS y un adelanto de lo que se puede hacer, sin muchas complicaciones, con CSS.
             </p>
-            
             <p>
-                La primera es añadir el atributo "style" al inicio de una etiqueta, y posteriormente definir el estilo que esa etiqueta tendrá, por ejemplo: 
+                En esta entrada, se tratará, de una manera mucho más ordenada, de introducirte adecuadamente al mundo de CSS, enseñándote, primeramente un par de propiedades que se consideran básicas (debido a que su uso es lo más común) para que ya tengas una base para las siguientes entradas del blog.
             </p>
-            
-             <figure class="post-img">
-                <img src="../img/articles/css-forma1.png" alt="CSSforma1">
-            </figure>
-            
             <p>
-                En ese ejemplo, se está diciendo que el párrafo tendrá un estilo con letras rojas. Esta forma de trabajar con CSS es la menos recomendada, debido a que  se tiene que estar dando estilo a cada etiqueta, y se puede volver confuso y muy largo, así que sólo se utiliza en páginas web muy pequeñas y simples..
+                Sin más preámbulo, comencemos con la propiedad, que, a mi parecer, es la más básica de todas y esta es:
             </p>
-            
+            <h3> Color</h3>
             <p>
-                La siguiente forma, igual poco recomendado, pero más usada que la anterior, es crear la hoja de estilo pero dentro la cabecera, o etiqueta "head" del archivo html, por ejemplo:
+                Esta propiedad, como textualmente te lo dice, está para cambiarle el color a algo. La propiedad "color", tiene que ir acompañada, por lógica, por un color, este se puede escribir de manera literal con su nombre en inglés, de la manera: "color:red;", por ejemplo. Pero también funciona de muchas otras formas, por ejemplo, con valores RGB (Tonos de rojo-red, verde-green, azul-blue), de la forma: "color:rgb(255,99,71);".
             </p>
-            
+            <p>
+                Ahora, la propiedad "color" por si sola (obviamente con un valor, me refiero a no estar acompañada de otra propiedad), tendrá la función de cambiar el color a la letra, pero, como acabo de mencionar, puede estar acompañada de otras propiedades para especificar otras cosas, sirviendo como preámbulo para la siguiente propiedad.
+            </p>
+            <h3 > Background </h3>
+            <p>
+                La propiedad "background", como su significado (fondo) te sugiere, sirve para editar el fondo de la página web.
+            </p>
+            <p>
+                El fondo puede ser en una totalidad del archivo, o sea, con la etiqueta "body" o bien, puede ser aplicado a etiquetas individuales, como los párrafos ("p"), por ejemplo.
+            </p>
+            <p>
+                Esta etiqueta funciona de dos maneras, si no se especifica otra propiedad, se entenderá que se quiere poner un fondo de color,  y se trabajará de la manera: "background: red;", por ejemplo.
+            </p>
+            <p>
+                Como bien mencioné antes, la propiedad "color" puede trabajar con esta propiedad, especificando lo anteriormente dicho, aunque el resultado será el mismo "background-color: red;".
+            </p>
+            <p>
+                El otro tipo de fondo que se puede utilizar, es una imagen, esto se hace de la siguiente manera: "background-image: url("imagenbonita.jpg");" donde imagenbonita.jpg es reemplazable por el nombre de la imagen (si está en la misma carpeta) o la ruta donde está la imagen más el nombre, y nunca olvidar poner la extensión de la misma.
+            </p>
+            <p>
+                A continuación, un ejemplito que utilice estas propiedades en sus variaciones mencionadas.
+            </p>
             <figure class="post-img">
-                <img src="../img/articles/css-forma2.png" alt="CSSforma2">
+                <img src="../img/articles/propiedades-css/ejemploblog1.png" alt = "CSSEjemplo1">
             </figure>
-            
             <p>
-                Primero, se tiene que notar que la forma de trabajo es distinta, en vez de editar etiqueta por etiqueta, estoy englobando a todas las etiquetas "p" del archivo html, luego, se abren llaves "{}", y luego se ponen las ediciones de estilo que se desean en esas etiquetas y se finalizan con un ";", como en ese ejemplo que configura el color de la letra en rojo y el color del fondo en azul.
+            Como podemos apreciar, se utilizan todos los métodos antes mencionados para probar las distintas variantes de estas dos propiedades básicas.
             </p>
-            
-            <p>
-                Esta forma de trabajo es recomendable sólo para páginas web sencillas, debido a que se haría un documento html extremandamente largo.
-            </p>
-            
-            <p>
-                Ahora, continuando, la tercera forma, y la que utilizaremos para entrar más en detalle es crear un archivo .css, y referenciarlo dentro de el archivo html, así:
-            </p>
-                        
-            <figure class="post-img">
-                <img src="../img/articles/css-forma3.png" alt="CSSforma3">
-            </figure>
-            
-            <p>
-                Dentro de la etiqueta "link" se escribe, primer el tipo de relación entre documentos, en este caso, hoja de estilo o <i>stylesheet</i>, en inglés, y como se debe de escribir en el documento, y luego, la referencia que se utilizará, o sea, el archivo .css, en este caso, como está situado en el mismo espacio donde está el documento html, no es necesario especificar la ruta, simplemente se escribe el nombre del archivo. 
-            </p>
-            
-            <p>
-                Habiendo hecho esta referencia, ya se puede trababajar dentro de la hoja css, y todos los cambios que se hagan ahí, se harán en el documento html; y, ¿cómo se trabajan en las hojas de estilo? De la  misma forma que en la 2da forma:
-            </p>
-            
-            <figure class="post-img">
-                <img src="../img/articles/css-basico.png" alt="cssbasico">
-            </figure>
-            
-            <p>
-                La primordial diferencia es que esto se trabaja en un documento aparte, totalmente dedicado a editar el estilo.
-            </p>
-            
-            <p>
-                Sabiendo esta forma, la que utilizaremos, ya podemos comenzar a entrar totalmente dentro del mundo de css.
-            </p> 
 
         </div>
 
@@ -207,7 +173,7 @@
             <div class="tags">
                 <a href="#" class="tag">CSS</a>
                 <a href="#" class="tag">HTML</a>
-                <a href="#" class="tag">JQUERY</a>
+                <!-- <a href="#" class="tag">JQUERY</a> -->
             </div>
 
           </div>
