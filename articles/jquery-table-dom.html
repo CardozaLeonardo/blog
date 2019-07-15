@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Guide</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/objects.css">
+
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="shortcut icon" href="../img/icon/brand.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="container-sfull" style="height: inherit;">
+
+            <!-- <a href="index.html" class="brand">Brand</a> -->
+            <a href="../index.html" class="brand"><img class="brand-image" src="../img/icon/brand.svg" alt="brand"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#" class="nav-link">Tutoriales</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <button class="dropdown-button">Tutoriales </button>
+                    <div class="dropdown-icon"></div>
+                    <div class="dropdown-content">
+                        <a href="../html-articles.html" class="">HTML</a>
+                        <a href="../css-articles.html" class="">CSS</a>
+                        <a href="../javascript-articles.html" class="">JavaScript</a>
+                        <a href="../jquery-articles.html" class="">JQuery</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact.html" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">Acerca</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        
+        <div class="main-content">
+
+            <h1>Tabla de registros con JQuery, aprendamos manejo del DOM y funciones asíncronas</h1>
+            <hr>
+    
+            <div class="author-box">
+                <figure class="author-profile">
+                    <img src="../img/leonardo.jpg" alt="autor">
+                </figure>
+
+                <div class="author-info">
+                    <a href="../about.html" class="author-name">Leonardo Cardoza Orozco</a>
+                    <p class="post-date">Miércoles 19 de junio de 2019</p>
+                </div>
+            </div>
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/workstation-336369_1280.jpg" alt="image">
+            </figure>
+            <hr>
+            
+            <p>
+                ¡Hola todos! Espero estén de lo mejor 
+                hoy. En esta ocasión trabajaremos en una tabla de registro cuya información es 
+                extraída desde una API, y que cargaremos a la tabla sin recargar la página. También 
+                dispondremos de un botón que removerá la fila del registro seleccionado. A lo largo del 
+                tutorial haremos uso de la librería JQuery con la finalidad de trabajar cómodamente, y de 
+                paso conoceremos formas de manipular el DOM Html a partir de información extraída por AJAX
+            </p>
+
+            <p>
+                Para fines de rapidez y presentación, importaremos los estilos del framework Bootstrap 
+                através de su API. Para ello, agregamos el siguiente código en nuestro head (copia y pega 
+                el código de abajo):
+            </p>
+
+            <div class="code-area">
+                <p>
+                    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+                </p>
+            </div>
+
+            <p>
+                Necesitarás agregar también JQuery:
+            </p>
+
+            <div class="code-area">
+                <p>
+                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+                </p>
+            </div>
+
+            <h3>Construyendo la tabla</h3>
+
+            <p>
+                Antes de empezar con la construcción de la tabla, creemos un contenedor para la tabla misma. Para ello crearemos el duo de etiquetas div con la 
+                clase “container”, de modo que nos quede así: &lt;div class=”container”&gt;&lt;/div&gt;. De esta forma tendremos un contenedor centrado con medidas aceptables que Bootstrap nos genera y es al que se adaptará la tabla.
+            </p>
+
+            <p>
+                Ahora construyamos la tabla dentro de nuestro contenedor:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/table-html.png" alt="image">
+            </figure>
+
+            <p>
+                Nuestra tabla contendrá la clase “table”, que servirá para que se apliquen los 
+                estilos definidos en Bootstrap a las tablas. Copia el código tal como está, la 
+                explicación de las clases de Bootstrap no será el objetivo de hoy.
+            </p>
+
+            <p>
+                La tabla se compone de 4 columnas: nombre, altura, peso y opción. 
+                El contenido de opción será un botón para la eliminación de la fila.
+            </p>
+
+            <p>
+                ¿Viste el atributo id en la etiqueta tbody? Eso nos servirá para localizar 
+                el elemento tanto con JavaScript y JQuery.
+            </p>
+
+            <p>
+                Ahora nos toca crear un archivo de JavaScript y agregarlos a nuestro documento HTML 
+                a través de una etiqueta script. Situaremos la etiqueta al final del cuerpo del HTML, de 
+                modo que se cargue primero la funcionalidad de JQuery, que lo agregamos en el head, para 
+                luego implementarlo desde nuestro archivo:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/script-tag.png" alt="image">
+            </figure> 
+
+            <h3>Implementación de Ajax con JQuery</h3>
+
+            <p>
+                En otro artículo tengo una <a href="api-starwars-ajax.html">demostración con la API que estaremos usando</a> para esta 
+                ocasión. En aquel ejemplo, cuando obtenía la información desde el servidor, lo mostraba 
+                únicamente en consola. Sin embargo, hoy la reutilizaremos, pero de una forma más vistosa 
+                y divertida. Vamos a cargar los datos de los personajes a nuestra tabla. Podríamos usar el 
+                JavaScript de toda la vida para hacerlo, pero he escogido usar JQuery ya que este nos 
+                simplifica el trabajo.
+            </p>
+
+            <p>
+                Comencemos definiendo los valores para la conexión:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/variables.png" alt="image">
+            </figure>
+
+            <p>
+                Esta será nuestra función que nos permitirá conectar y realizar la petición de la información:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/promise.png" alt="image">
+            </figure>
+
+            <p>
+                La función recibirá como parámetro el id del personaje que queremos recuperar. 
+                Esta función retorna una promesa, una promesa (sin entrar en profundo) es una forma 
+                muy práctica de trabajar con ejecuciones asíncronas. Todo el código implementado en la 
+                petición, es facilitado por JQuery. No hace falta entrar en explicaciones más profundas 
+                sobre las promesas en estos momentos, por ahora procura dejar el código exactamente 
+                igual a como aparece en la imagen.
+            </p>
+
+            <h3>Preparando nuestro callback para manipular el HTML</h3>
+
+            <p>
+                Como todas las tareas asíncronas en JavaScript, se debe especificar 
+                un callback. Un callback es el proceso que se ejecutará cuando nuestra 
+                petición tenga respuesta. En la siguiente imagen se muestra una función 
+                que nos permitirá agregar una nueva fila, cada fila corresponde a la información 
+                de cada personaje.
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/callback-2.PNG" alt="image">
+            </figure>
+
+            <p>
+                Nuestra función cuenta con lo siguiente:
+            </p>
+
+            <ol>
+                <li>
+                    Recibe como parámetro el objeto personaje enviado 
+                    desde el servidor y el id del personaje que será especificado por nosotros.
+                </li>
+
+                <li>
+                    Aquí declaramos una cadena con la que construiremos una nueva 
+                    fila en la tabla y, además, agregaremos los datos del personaje. Los datos a 
+                    mostrar serán el nombre, la altura y peso; en la columna opción, como se dijo, será 
+                    para el botón eliminar. Puedes ver que hacemos uso de (``), este tipo de comillas nos 
+                    permiten concatenar valores internamente (${}). Aquí es importante notar que incrustamos 
+                    l id del personaje en el atributo id de la fila, de modo que podamos localizarlo para su 
+                    eliminación.
+                </li>
+
+                <li>
+                    De igual forma, aquí incrustamos el id, pero esta vez será para otorgar un parámetro 
+                    a la función del evento implícito en el botón eliminar. Este evento (click) invoca a la 
+                    función que eliminará la fila.
+                </li>
+
+                <li>
+                    Volvemos a utilizar la sintaxis de JQuery, esta vez para anexar contenido. En el selector 
+                    especificamos el id del elemento que queremos elegir (“#table-cont”), que si bien recuerdas era 
+                    la etiqueta tbody, el cual encerrará todas las filas. Luego, usamos el método append, pasándole 
+                    como parámetro la nueva fila que se ha creado. Este método agregará nuestra nueva fila.
+                </li>
+
+                <h3>Eliminación del registro</h3>
+            </ol>
+
+            <p>
+                Debo aclarar que al eliminar una fila de la tabla, simplemente se eliminará 
+                el elemento en nuestro HTML, no el registro en la base de datos del servidor.
+            </p>
+
+            <p>
+                Dicho esto, pasemos a crear la función con la que eliminaremos la fila:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/delete-row.png" alt="image">
+            </figure>
+
+            <p>¿Qué pasa aquí?</p>
+
+            <p>
+                Como se puede ver, esta es la función que utiliza nuestro evento onClick en 
+                HTML, al que también le pasamos el id del personaje.
+            </p>
+
+            <p>
+                Lo primero es utilizar el selector para encontrar un elemento que contenga el atributo 
+                id con el valor que hemos especificado. El elemento que debe encontrar es la fila de la 
+                tabla pues, a como vimos anteriormente, es la fila quien contiene el atributo id.
+            </p>
+
+            <p>Y sólo nos queda utilizar el la función remove para eliminar el elemento junto con sus hijos.</p>
+
+            <h3>Código para iniciar la petición</h3>
+
+            <p>Es hora de implementar el código que arranque todo:</p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/final-part.PNG" alt="image">
+            </figure>
+
+            <p>
+                Hacemos el llamado a la función que ejecutará la pet
+                ición Ajax a la API. Como es una función que retorna una promesa, debemo
+                s usar la sentencia then, la sentencia then será lo que se ejecuta cuando nu
+                estra petición finalice exitosamente. Usamos la función agregarFila, al cual pasa
+                mos como parámetro el objeto resultante de la petición y el id del personaje espec
+                ificado por nosotros. Hacemos una cadena de retornos hasta tener un total de 5 personajes.
+            </p>
+
+            <h3>Vayamos al navegador</h3>
+
+            <p>
+                Cuando abramos el navegador deberíamos ver la tabla vacía en primer momento 
+                para luego ver agregarse cada registro.
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/tabla.PNG" alt="image">
+            </figure>
+
+            <p>
+                Ahora hagamos una prueba eliminado a Luke Skywalker:
+            </p>
+
+            <figure class="post-img">
+                <!-- <img src="img/computer-1836330_1920.png" alt="image"> -->
+                <img src="../img/articles/table-jquery/tabla-2.PNG" alt="image">
+            </figure>
+
+            <p>
+                Divertido ¿Verdad?
+            </p>
+
+            <p>
+                Si quieres probarlo tú mismo, puedes acceder al ejemplo en CodePen:
+            </p>
+
+            <p>
+                <a href="https://codepen.io/_leocode20/pen/QrPbXp" target="_blank">IR AL EJEMPLO</a>
+            </p>
+
+            <p>
+                Espero hay sido de tu gusto ¡Hasta la próxima!
+            </p>
+
+        </div>
+
+        <div class="lateral-content">
+          <!-- <h4>Te puede interesar</h4>
+          <div class="post-recom">
+              <img src="img/yjdoiycuw04lvrebijtw.jpg" alt="post">
+
+          </div> -->
+
+          <div class="search-group">
+                <div class="controllers-cont">
+
+                    <input placeholder="BUSCAR" type="text" class="txt-buscar">
+                        <button type="submit" class="search-button"><i class="search-icon"></i></button>
+                </div>
+          </div>
+
+          <div class="lateral-cards">
+              <h5>Te puede interesar</h5>
+
+              <a href="css-tuani.html">
+                  <div class="lateral-card">
+                      <figure class="lat-card-img">
+                          <img src="../img/articles/css-tuani-cover.jpg" alt="post">
+                      </figure>
+                      <h6 class="lat-card-title">
+                          Introducción CSS
+                      </h6>
+                      <p class="lat-card-text">
+                        CSS, las siglas para <i>Cascading Style Sheets</i>, u Hojas de estilo en cascada, es una tecnología que 
+                        nos permite crear una página web de manera más exacta;
+                  </div>
+              </a>
+
+              <a href="inicio-rapido-css.html">
+                <div class="lateral-card">
+                    <figure class="lat-card-img">
+                        <img src="../img/articles/inicio-rapido-css/4_newish_css_props-1502899924586.png" alt="post">
+                    </figure>
+                    <h6 class="lat-card-title">
+                        Inicio rápido CSS
+                    </h6>
+                    <p class="lat-card-text">
+                        Primero, se tiene que saber que el estilo es aplicable a todas las etiquetas, ya sean 
+                        "body", "p", "pre", "div", "header"
+                    </p>
+                </div>
+            </a>
+
+
+          </div>
+
+          <div class="tag-container">
+              
+            <h5 class="tag-title">Etiquetas</h5>
+            <div class="tags">
+                <a href="#" class="tag">CSS</a>
+                <a href="#" class="tag">HTML</a>
+                <a href="#" class="tag">JQUERY</a>
+                <a href="#" class="tag">JavaScript</a>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Universidad Centroamericana - 2019</p>
+        <div class="social">
+            <a href="#" class="social-link"><img src="../img/icon/facebook-logo-button.svg" alt="facebook"></a>
+            <a href="#" class="social-link"><img src="../img/icon/twitter.svg" alt="twitter"></a>
+            <a href="#" class="social-link"><img src="../img/icon/github-logo.svg" alt="github"></a>
+            <a href="#" class="social-link"><img src="../img/icon/youtube.svg" alt="youtube"></a>
+        </div>
+    </footer>
+</body>
+</html>

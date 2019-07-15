@@ -204,6 +204,13 @@ p{
     font-size: 17px;
 }
 
+ol li{
+    color: #363636;
+    font-family: Lato;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
 .container-sfull{
     width: 90%;
     margin: 0 auto;

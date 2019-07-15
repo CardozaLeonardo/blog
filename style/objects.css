@@ -225,12 +225,13 @@ textarea{
 
 
 .down-box{
-    width: 200px;
+    width: 60%px;
     background: white;
-    height: 100px;
-    display: flex;
+    height: auto;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    padding: 20px 15px;
 }
 
 .down-box a{
@@ -242,6 +243,25 @@ textarea{
 .down-box a:hover{
    color: #EEA826;
 }
+
+#profe{
+    border: solid 2px rgba(238, 168, 38, 0.425);
+}
+
+.code-area{
+    background: #272822;
+    color: white;
+    font-family: Lato;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.code-area p{
+    color: #ebe9e9;
+}
+
+
+
 
 
 

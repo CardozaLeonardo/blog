@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.63351388"
-     inkscape:cx="32.882768"
-     inkscape:cy="166.90762"
+     inkscape:zoom="0.89592392"
+     inkscape:cx="214.4623"
+     inkscape:cy="76.302161"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -65,7 +65,7 @@
            height="54.285713"
            x="-11.428572"
            y="493.94824" /></flowRegion><flowPara
-         id="flowPara835"></flowPara></flowRoot>    <flowRoot
+         id="flowPara835" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot837"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Orbitron;-inkscape-font-specification:Orbitron;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -76,23 +76,24 @@
            height="48.57143"
            x="105.71429"
            y="588.23395" /></flowRegion><flowPara
-         id="flowPara843"></flowPara></flowRoot>    <g
-       id="g871"
-       transform="translate(-11.642336,113.95934)">
+         id="flowPara843" /></flowRoot>    <g
+       id="g847"
+       transform="translate(-4.9415162e-7,-3.0059921e-6)">
       <g
+         transform="translate(-11.642336,113.95934)"
          id="text817"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:113.20031738px;line-height:1.25;font-family:Orbitron;-inkscape-font-specification:Orbitron;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.83000803"
          aria-label="M">
         <path
            id="path849"
            style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Orbitron;-inkscape-font-specification:'Orbitron Heavy';fill:#eea826;fill-opacity:1"
-           d="M 57.375357,133.54481 29.75448,100.60351 H 11.642429 v 81.50423 h 17.546049 v -54.56255 l 28.186879,33.39409 c 9.056026,-10.64083 18.904453,-22.64006 28.073679,-33.50729 v 54.67575 H 103.10829 V 100.60351 H 84.883034 Z"
+           d="m 57.375362,149.16644 27.620877,32.9413 H 103.10829 V 100.60351 H 85.562241 v 54.56255 L 57.375362,121.77197 C 48.319336,132.4128 38.470909,144.41203 29.301683,155.27926 V 100.60351 H 11.642429 v 81.50423 h 18.225256 z"
            inkscape:connector-curvature="0" />
       </g>
       <g
          id="text847"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.0055027px;line-height:1.25;font-family:Orbitron;-inkscape-font-specification:Orbitron;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.60013753"
-         transform="matrix(0,-1.0208205,0.9796042,0,0,0)"
+         transform="matrix(0,-1.0208205,0.9796042,0,-11.642336,113.95934)"
          aria-label="GUIDE">
         <path
            id="path852"
